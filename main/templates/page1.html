@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+  <title> This is Page 1 </title>
+
+  </head>
+
+
+  <body>
+    <h1> This is web page 1 </h1>
+
+    <a href="{% url 'webpage2' %}">Get Stock Projection </a>
+
+    <form method="get" action="{% url 'webpage2'%}">
+    <input type="text" name="name" value="{{request.GET.name}}">
+
+
+    <button type="submit">Submit</button>
+
+    </form>
+
+
+
+    </body>
+
+
+
+
+</html>
