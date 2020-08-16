@@ -138,7 +138,7 @@ STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesSto
 
 
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
 
 
 # PROJECT_ROOT   =   os.path.join(os.path.abspath(__file__))
