@@ -25,5 +25,5 @@ if __name__ == "__main__":
         raise
     execute_from_command_line(sys.argv)
 
-class Command(runserver.Command):
-    default_port = settings.RUNSERVER_PORT
+# class Command(runserver.Command):
+#     default_port = settings.RUNSERVER_PORT
