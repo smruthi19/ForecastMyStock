@@ -25,7 +25,7 @@ SECRET_KEY = 'qe5o-k8s19l%xg%^v7^gf0!^a8_f&gw$e6hy-h%x&*r-)bb8*4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['forecastmystock.herokuapp.com']
 # ALLOWED_HOSTS = ['forecastmystock.herokuapp.com', 'forecastmystock.com']
 # ALLOWED_HOSTS = []
