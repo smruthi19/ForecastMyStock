@@ -1257,8 +1257,8 @@ def webpage3(request):
     df2 = DataFrame(xlist[10:22],columns=['Dates'])
     # print (df)
     df2['values']=new_list[10:22]
-    df3=DataFrame(xlist[21:37],columns=['Dates1'])
-    df3['values1']=new_list[21:37]
+    df3=DataFrame(xlist[21:35],columns=['Dates1'])
+    df3['values1']=new_list[21:35]
 
 
     fig.add_scatter(x=df['Dates'], mode='lines', y=df['values'], name='current values')
