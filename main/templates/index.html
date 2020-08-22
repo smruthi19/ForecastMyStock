@@ -2,6 +2,14 @@
 {% load static %}
 <html lang="en">
 <head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150425825-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-150425825-3');
+  </script>
 
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -11,6 +19,8 @@
 
     <!-- Title -->
     <title>Forecast My Stock</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
 
@@ -295,8 +305,7 @@
             </body>
             </html>
 
-        </div>
-    </div>
+
     <!-- ##### Top Catagory Area End ##### -->
 
     <!-- ##### Newsletter Area Start ###### -->
@@ -421,58 +430,43 @@
     <!-- ##### Contact Area End #####-->
 
     <!-- ##### Footer Area Start ##### -->
-    <footer class="footer-area section-padding-100-0">
-        <div class="container-fluid">
-            <div class="row justify-content-between">
 
-                <!-- Single Footer Widget -->
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="single-footer-widget mb-100">
-                      <div class="col-sm-4">
-                          <!-- <div class="single-footer-widget mb-100">
-                              <h5 class="widget-title">Address</h5>
-                              <p>1530 Doverfield Ave <br> Hacienda Heights, California(CA), 91745</p>
-                          </div> -->
-                      </div>
-                        <!-- Footer Logo -->
-                        <!-- <a href="index.html" class="footer-logo"><img src="/static/img/core-img/logo.png" alt=""></a> -->
-                    </div>
-                </div>
-
-                <!-- Single Footer Widget -->
-                <!-- <div class="col-12 col-md-9 col-lg-8 col-xl-7"> -->
-                    <!-- <div class="row"> -->
-                        <!-- Single Footer Widget -->
-
-
-                        <!-- Single Footer Widget -->
-                        <div class="col-sm-4">
-                            <div class="single-footer-widget mb-100">
-                                <h5 class="widget-title">Support</h5>
-                                <p><i class="fa fa-phone"></i> <br>Phone </p>
-                                <p><i class="fa fa-comment"></i> <br>Chat </p>
-                                <p><i class="fa fa-envelope"></i> <br>email </p>
-                            </div>
-                        </div>
-
-                        <!-- Single Footer Widget -->
-                        <div class="col-sm-4">
-                            <div class="single-footer-widget mb-100">
-                                <h5 class="widget-title">Social</h5>
-                                <div class="footer-social-info">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-dribbble"></i></a>
-                                    <a href="#"><i class="fa fa-flickr"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <!-- <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Ticker Tape</span></a> by TradingView</div> -->
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FOREXCOM:SPXUSD",
+      "title": "S&P 500"
+    },
+    {
+      "proName": "FOREXCOM:NSXUSD",
+      "title": "Nasdaq 100"
+    },
+    {
+      "proName": "FX_IDC:EURUSD",
+      "title": "EUR/USD"
+    },
+    {
+      "proName": "BITSTAMP:BTCUSD",
+      "title": "BTC/USD"
+    },
+    {
+      "proName": "BITSTAMP:ETHUSD",
+      "title": "ETH/USD"
+    }
+  ],
+  "colorTheme": "light",
+  "isTransparent": false,
+  "displayMode": "adaptive",
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
 
         <!-- Copywrite Area -->
         <div class="copywrite-area">
@@ -492,9 +486,9 @@
                             <ul>
                                 <li><a href="{% url 'index' %}">Home</a></li>
                                 <li><a href="#">About us</a></li> -->
-                                <li><a href="{% url 'services' %}"> Forecast</a></li>
+                                <!-- <li><a href="{% url 'services' %}"> Forecast</a></li> -->
                                 <!-- <li><a href="#">Portfolio</a></li> -->
-                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                                <!-- <li><a href="{% url 'contact' %}">Contact</a></li> -->
                             </ul>
                         </nav>
                     </div>
