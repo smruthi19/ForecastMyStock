@@ -69,11 +69,11 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                               <ul>
-                                  <li><a href="{% url 'index' %}">Home</a></li>
+                                  <li><a href="{% url 'index' %}" style="color:black;font-weight:bold;">Home</a></li>
 
-                                  <li><a href="{% url 'services' %}">Forecast</a></li>
+                                  <li><a href="{% url 'services' %}" style="color:black;font-weight:bold;">Forecast</a></li>
                                   <!-- <li><a href="{% url 'about' %}">About</a></li> -->
-                                  <li><a href="{% url 'contact' %}">Contact</a></li>
+                                  <li><a href="{% url 'contact' %}" style="color:black;font-weight:bold;">Contact</a></li>
                                   <!-- <li><a href="{% url 'webpage3' %}">Realtime Stock Data</a> -->
                                       <!-- <ul class="dropdown">
                                           <li><a href="/templates/index.html">Home</a></li>
@@ -208,6 +208,9 @@
                 </div>
                 <!-- Single Service Block -->
                 <img src="data:image/jpg;base64,{{ data }}" alt="" height="2000",width="3000">
+                <!-- TradingView Widget BEGIN -->
+
+<!-- TradingView Widget END -->
                 <h1> Forecasted Values </h1>
 
                 <div id="fig_container">
@@ -309,6 +312,7 @@
                 <!-- Single Service Area -->
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="single-service-area text-center mb-100 wow fadeInUp" data-wow-delay="100ms">
+
                         <!-- <img src="img/core-img/cursor.png" alt=""> -->
                         <!-- <h5>Light Weight &amp; Fast</h5> -->
                         <!-- <p>Morbi tempus lobortis nunc non commodo. Pellentesque habitant morbi tristique senectus et netus et.</p> -->
@@ -419,84 +423,63 @@
     <!-- ##### Service Area End ##### -->
 
     <!-- ##### Footer Area Start ##### -->
-    <footer class="footer-area section-padding-100-0">
-        <div class="container-fluid">
-            <div class="row justify-content-between">
 
-                <!-- Single Footer Widget -->
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="single-footer-widget mb-100">
-                        <!-- Footer Logo -->
-                        <a href="index.html" class="footer-logo"><img src="/static/img/core-img/logo.png" alt=""></a>
-                    </div>
-                </div>
-
-                <!-- Single Footer Widget -->
-                <div class="col-12 col-md-9 col-lg-8 col-xl-7">
-                    <div class="row">
-                        <!-- Single Footer Widget -->
-                        <div class="col-sm-4">
-                            <div class="single-footer-widget mb-100">
-                                <h5 class="widget-title">Address</h5>
-                                <p>1530 Doverfield Ave <br> Hacienda Heights, California(CA), 91745</p>
-                            </div>
-                        </div>
-
-                        <!-- Single Footer Widget -->
-                        <div class="col-sm-4">
-                            <div class="single-footer-widget mb-100">
-                                <h5 class="widget-title">Support</h5>
-                                <p><i class="fa fa-phone"></i> <br> +01 251 332 331</p>
-                            </div>
-                        </div>
-
-                        <!-- Single Footer Widget -->
-                        <div class="col-sm-4">
-                            <div class="single-footer-widget mb-100">
-                                <h5 class="widget-title">Social</h5>
-                                <div class="footer-social-info">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-dribbble"></i></a>
-                                    <a href="#"><i class="fa fa-flickr"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Copywrite Area -->
-        <div class="copywrite-area">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-12 col-md-6">
-                        <div class="copywrite-content">
-                            <!-- Copywrite Text -->
-                            <p class="copywrite-text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <nav class="footer-nav">
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Portfolio</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text"></span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "description": "GOOG",
+      "proName": "NASDAQ:GOOG"
+    },
+    {
+      "description": "NFLX",
+      "proName": "NASDAQ:NFLX"
+    },
+    {
+      "description": "AAPL",
+      "proName": "NASDAQ:AAPL"
+    },
+    {
+      "description": "PFE",
+      "proName": "NYSE:PFE"
+    },
+    {
+      "description": "BAC",
+      "proName": "NYSE:BAC"
+    },
+    {
+      "description": "INTC",
+      "proName": "NASDAQ:INTC"
+    },
+    {
+      "description": "AMZN",
+      "proName": "NASDAQ:AMZN"
+    },
+    {
+      "description": "MSFT",
+      "proName": "NASDAQ:MSFT"
+    },
+    {
+      "description": "DAL",
+      "proName": "NYSE:DAL"
+    },
+    {
+      "description": "VZ",
+      "proName": "NYSE:VZ"
+    }
+  ],
+  "colorTheme": "light",
+  "isTransparent": false,
+  "displayMode": "adaptive",
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
     <!-- ##### Footer Area Start ##### -->
 
     <!-- ##### All Javascript Script ##### -->

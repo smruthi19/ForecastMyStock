@@ -79,10 +79,14 @@ def webpage3(request):
         print(query)
         result = str(query)
         print(result)
+        index_num = result.find(' ')
+
+        print('result Before the Space = ', result[ : index_num])
+        updatedresult=result[ : index_num]
 
         # url=('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=NYSE:GOOGL&apikey=XCIMZL4S81DCVOQO')
         url1='https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol='
-        url2=result
+        url2=updatedresult
         url3='&apikey=XCIMZL4S81DCVOQO'
         url=url1+url2+url3
 
@@ -315,10 +319,14 @@ def webpage3(request):
         print(query)
         result = str(query)
         print(result)
+        index_num = result.find(' ')
+
+        print('result Before the Space = ', result[ : index_num])
+        updatedresult=result[ : index_num]
 
         # url=('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=NYSE:GOOGL&apikey=XCIMZL4S81DCVOQO')
         url1='https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol='
-        url2=result
+        url2=updatedresult
         url3='&apikey=XCIMZL4S81DCVOQO'
         url=url1+url2+url3
 
@@ -569,10 +577,13 @@ def webpage3(request):
         print(query)
         result = str(query)
         print(result)
+        index_num = result.find(' ')
 
+        print('result Before the Space = ', result[ : index_num])
+        updatedresult=result[ : index_num]
         # url=('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=NYSE:GOOGL&apikey=XCIMZL4S81DCVOQO')
         url1='https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol='
-        url2=result
+        url2=updatedresult
         url3='&apikey=XCIMZL4S81DCVOQO'
         url=url1+url2+url3
         # url=('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=NYSE:GOOGL&apikey=XCIMZL4S81DCVOQO')
@@ -1063,10 +1074,13 @@ def webpage3(request):
     print(query)
     result = str(query)
     print(result)
+    index_num = result.find(' ')
 
+    print('result Before the Space = ', result[ : index_num])
+    updatedresult=result[ : index_num]
     # url=('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=NYSE:GOOGL&apikey=XCIMZL4S81DCVOQO')
     url1='https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol='
-    url2=result
+    url2=updatedresult
     url3='&apikey=XCIMZL4S81DCVOQO'
     url=url1+url2+url3
     # url=('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=NYSE:GOOGL&apikey=XCIMZL4S81DCVOQO')
@@ -1266,10 +1280,10 @@ def webpage3(request):
 
 
 
-#     fig.update_layout(
-#     # height=800,
-#     title_text='Weekly Forecast'
-# )
+    fig.update_layout(
+    #     # height=800,
+     title_text=result+ ' ' + 'Weekly Forecast'
+    )
     # fig.show()
     graph = fig.to_html(full_html=False, default_height=500, default_width=1000)
     context = {'graph': graph}
@@ -1283,7 +1297,10 @@ def webpage3(request):
     fig1.add_scatter(x=df3['Dates1'], y=df3['values1'], mode='lines', name='forecasted values')
 
     # fig1.show()
-
+    fig1.update_layout(
+    #     # height=800,
+     title_text=result+ ' ' + 'Overview Forecast'
+    )
 
     graph1 = fig1.to_html(full_html=False, default_height=500, default_width=1000)
     context = {'graph1': graph1}
