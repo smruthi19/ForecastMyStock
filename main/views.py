@@ -1282,7 +1282,7 @@ def webpage3(request):
 
     fig.update_layout(
     #     # height=800,
-     title_text=result+ ' ' + 'Weekly Forecast'
+     title_text=result+ ' '
     )
     # fig.show()
     graph = fig.to_html(full_html=False, default_height=500, default_width=1000)
@@ -1299,7 +1299,7 @@ def webpage3(request):
     # fig1.show()
     fig1.update_layout(
     #     # height=800,
-     title_text=result+ ' ' + 'Overview Forecast'
+     title_text=result+ ' ' 
     )
 
     graph1 = fig1.to_html(full_html=False, default_height=500, default_width=1000)
