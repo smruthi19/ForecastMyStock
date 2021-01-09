@@ -27,7 +27,7 @@ SECRET_KEY = 'qe5o-k8s19l%xg%^v7^gf0!^a8_f&gw$e6hy-h%x&*r-)bb8*4'
 # DEBUG = True
 DEBUG = True
 # ALLOWED_HOSTS = ['forecastmystock.herokuapp.com']
-ALLOWED_HOSTS = ['forecastmystock.herokuapp.com', 'www.forecastmystock.com']
+ALLOWED_HOSTS = ['forecastmystock.herokuapp.com', 'www.forecastmystock.com','127.0.0.1']
 # ALLOWED_HOSTS = []
 DAJAXICE_XMLHTTPREQUEST_JS_IMPORT = False
 

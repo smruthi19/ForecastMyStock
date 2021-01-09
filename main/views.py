@@ -70,6 +70,17 @@ def webpage3(request):
         print(holidaylist)
 
 
+    for ptr in holidays.US(years = 2021).items():
+
+
+        ptr = list(ptr)
+        print(ptr)
+        print("holidays")
+
+        holidaylist.append(ptr[0].strftime('%Y-%m-%d'))
+        #print(holidaylist)
+
+
 
     def NormalModel():
 
@@ -118,7 +129,6 @@ def webpage3(request):
         index=0
         while(index< len(xlist)):
             print(data['Time Series (Daily)'][xlist[index]]['4. close'])
-
             ylist.append(data['Time Series (Daily)'][xlist[index]]['4. close'])
             index=index+1
 
@@ -1299,7 +1309,7 @@ def webpage3(request):
     # fig1.show()
     fig1.update_layout(
     #     # height=800,
-     title_text=result+ ' ' 
+     title_text=result+ ' '
     )
 
     graph1 = fig1.to_html(full_html=False, default_height=500, default_width=1000)
