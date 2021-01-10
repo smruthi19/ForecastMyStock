@@ -1290,12 +1290,13 @@ def webpage3(request):
 
 
 
+
     fig.update_layout(
     #     # height=800,
      title_text=result+ ' '
     )
     # fig.show()
-    graph = fig.to_html(full_html=False, default_height=500, default_width=1000)
+    graph = fig.to_html(full_html=False)
     context = {'graph': graph}
 
 
@@ -1306,13 +1307,15 @@ def webpage3(request):
     fig1.add_scatter(x=df2['Dates'], y=df2['values'], mode='lines', name='current values')
     fig1.add_scatter(x=df3['Dates1'], y=df3['values1'], mode='lines', name='forecasted values')
 
-    # fig1.show()
+    #fig1.show(config=config)
     fig1.update_layout(
     #     # height=800,
      title_text=result+ ' '
-    )
 
-    graph1 = fig1.to_html(full_html=False, default_height=500, default_width=1000)
+
+    )
+    config={'responsive': True}
+    graph1 = fig1.to_html(config=config, full_html=False)
     context = {'graph1': graph1}
 
 
