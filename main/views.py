@@ -1296,7 +1296,7 @@ def webpage3(request):
      title_text=result+ ' '
     )
     # fig.show()
-    graph = fig.to_html(full_html=False)
+    graph = fig.to_html(full_html=False, default_height=500, default_width=1000)
     context = {'graph': graph}
 
 
@@ -1309,13 +1309,22 @@ def webpage3(request):
 
     #fig1.show(config=config)
     fig1.update_layout(
-    #     # height=800,
-     title_text=result+ ' '
-
+    title_text=result+ ' ',
+    # config={'responsive': True}
 
     )
-    config={'responsive': True}
-    graph1 = fig1.to_html(config=config, full_html=False)
+
+
+    fig.write_html('figure1.html', auto_open=True)
+
+
+    # dcc.Graph(
+    # id="graph1"
+    # figure=fig1
+    #
+    # )
+    graph1 = fig1.to_html(full_html=False, default_height=500, default_width=1000)
+
     context = {'graph1': graph1}
 
 
