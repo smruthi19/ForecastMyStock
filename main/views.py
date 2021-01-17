@@ -1315,9 +1315,11 @@ def webpage3(request):
      title_text=result+ ' '
     )
     # fig.show()
-    graph = fig.to_html(full_html=False, default_height=500, default_width=1000)
-    context = {'graph': graph}
-
+    # graph = fig.to_html(full_html=False, default_height=500, default_width=1000)
+    # context = {'graph': graph}
+    import plotly
+    config={'responsive': True}
+    graph = plotly.offline.plot(fig, auto_open = False, output_type="div", config=config)
 
 
     fig1 = go.Figure()
