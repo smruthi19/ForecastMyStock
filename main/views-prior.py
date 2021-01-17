@@ -265,23 +265,16 @@ def webpage3(request):
 
 
         print(predictions)
-        print(len(predictions))
         print("predictions!")
 
         # percent error
         percentlist=[]
         print(values)
-        exact=values[10:]
+        exact=values[10:21]
         print(exact)
-        print(len(exact))
-
-        if (len(predictions) < len(exact)):
-            lengthvalue=len(predictions)
-        else:
-            lengthvalue=len(exact)
 
         value=0
-        while (value<lengthvalue):
+        while (value<len(predictions)):
             subtract=predictions[value] - exact[value]
             # print(subtract)
             error=(subtract)/(exact[value])
@@ -546,14 +539,9 @@ def webpage3(request):
 
 
         percentlist=[]
-        exact=df.values[10:]
-        print(len(exact))
+        exact=df.values[10:21]
         value=0
-        if (len(predictions) < len(exact)):
-            lengthvalue=len(predictions)
-        else:
-            lengthvalue=len(exact)
-        while (value<lengthvalue):
+        while (value<len(list)):
             subtract=list[value] - exact[value]
             # print(subtract)
             error=(subtract)/(exact[value])
@@ -960,16 +948,12 @@ def webpage3(request):
         print(invertedlist)
         npa = np.asarray(invertedlist, dtype=np.float32)
         print(npa)
-        exact=np.asarray(X[10:], dtype=np.float32)
+        exact=np.asarray(X[10:21], dtype=np.float32)
         print(exact)
         # percent error
         percentlist=[]
         value=0
-        if (len(npa) < len(exact)):
-            lengthvalue=len(npa)
-        else:
-            lengthvalue=len(exact)
-        while (value<lengthvalue):
+        while (value<len(npa)):
             subtract=npa[value] - exact[value]
             # print(subtract)
             error=(subtract)/(exact[value])
@@ -1300,8 +1284,8 @@ def webpage3(request):
     df2 = DataFrame(xlist[10:22],columns=['Dates'])
     # print (df)
     df2['values']=new_list[10:22]
-    df3=DataFrame(xlist[21:34],columns=['Dates1'])
-    df3['values1']=new_list[21:34]
+    df3=DataFrame(xlist[21:35],columns=['Dates1'])
+    df3['values1']=new_list[21:35]
 
 
     fig.add_scatter(x=df['Dates'], mode='lines', y=df['values'], name='current values')
@@ -1333,11 +1317,9 @@ def webpage3(request):
 
 
     )
-    import plotly
     config={'responsive': True}
-    graph1 = plotly.offline.plot(fig1, auto_open = False, output_type="div", config=config)
-    # graph1 = fig1.to_html(config=config, full_html=False, default_height=500, default_width=1000)
-    # context = {'graph1': graph1}
+    graph1 = fig1.to_html(config=config, full_html=False, default_height=500, default_width=1000)
+    context = {'graph1': graph1}
 
 
 
