@@ -56,7 +56,7 @@ def about(request):
 
 def webpage3(request):
 
-# Select country
+# Select a country
 
     us_holidays = holidays.US()
     holidaylist=[]
@@ -72,8 +72,15 @@ def webpage3(request):
         print(holidaylist)
 
 
+    for ptr in holidays.US(years = 2021).items():
 
 
+        ptr = list(ptr)
+        print(ptr)
+        print("holidays")
+
+        holidaylist.append(ptr[0].strftime('%Y-%m-%d'))
+        #print(holidaylist)
 
 
 
@@ -242,6 +249,7 @@ def webpage3(request):
         print("other")
         plt.plot(train)
         plt.plot(test, color='orange')
+        # plt.show()
         predictions=[]
 
 
