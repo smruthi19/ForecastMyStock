@@ -79,16 +79,16 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd5ee67rpan17hk',
-        'USER': 'umqciqzfdxpxtq',
-        'PASSWORD': 'f7d43821a3944a4cfa286cfe91a258a2b3d6c92ddfab8e3ecbf43bc2b6278ab7',
-        'HOST':'ec2-184-73-249-9.compute-1.amazonaws.com',
-        'PORT': '5432',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'd5ee67rpan17hk',
+#         'USER': 'umqciqzfdxpxtq',
+#         'PASSWORD': 'f7d43821a3944a4cfa286cfe91a258a2b3d6c92ddfab8e3ecbf43bc2b6278ab7',
+        #'HOST':'ec2-184-73-249-9.compute-1.amazonaws.com',
+        #'PORT': '5432',
+#    }
+#}
 
 
 # Password validation
@@ -140,7 +140,7 @@ STATICFILES_DIRS= [
 ]
 STATIC_ROOT = os.path.join(PROJECT_PATH, "staticfiles")
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
 
 

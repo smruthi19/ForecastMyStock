@@ -25,11 +25,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 # from scripy.interpolate import spline
 from datetime import date
+import pandas as pd
 from pandas import DataFrame
 from statsmodels.tsa.ar_model import AR
 from statsmodels.tsa.arima_model import ARIMA
 from sklearn.metrics import mean_squared_error
-import pandas as pd
 # from django.shortcuts import render_to_response
 import mpld3
 from django.shortcuts import render
@@ -57,9 +57,11 @@ def about(request):
 def webpage3(request):
 
 # Select country
+
     us_holidays = holidays.US()
     holidaylist=[]
-    for ptr in holidays.US(years = 2020).items():
+    current_year = date.today().year
+    for ptr in holidays.US(years = current_year).items():
 
 
         ptr = list(ptr)
@@ -70,15 +72,8 @@ def webpage3(request):
         print(holidaylist)
 
 
-    for ptr in holidays.US(years = 2021).items():
 
-
-        ptr = list(ptr)
-        print(ptr)
-        print("holidays")
-
-        holidaylist.append(ptr[0].strftime('%Y-%m-%d'))
-        #print(holidaylist)
+        
 
 
 
