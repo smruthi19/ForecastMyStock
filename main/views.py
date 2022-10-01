@@ -73,7 +73,7 @@ def webpage3(request):
 
 
 
-        
+
 
 
 
@@ -242,7 +242,6 @@ def webpage3(request):
         print("other")
         plt.plot(train)
         plt.plot(test, color='orange')
-        # plt.show()
         predictions=[]
 
 
